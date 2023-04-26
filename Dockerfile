@@ -7,10 +7,8 @@ LABEL org.opencontainers.image.source="https://github.com/saschazesiger/docker-b
 ARG TURBOVNC_V=3.0.3
 
 
-
 RUN apt-get update && \
-	apt-get -y install --no-install-recommends xvfb wmctrl x11vnc websockify fluxbox screen libxcomposite-dev libxcursor1 xauth && \
-	sed -i '/    document.title =/c\    document.title = "noVNC";' /usr/share/novnc/app/ui.js && \
+	apt-get -y install --no-install-recommends xvfb wmctrl x11vnc fluxbox screen libxcomposite-dev libxcursor1 xauth && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN cd /tmp && \
