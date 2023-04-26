@@ -25,7 +25,7 @@ RUN cd /tmp && \
 	rm -rf /tmp/noVNC* /tmp/novnc.tar.gz
 
 RUN apt-get update && \
-	apt-get -y install --no-install-recommends xvfb wmctrl x11vnc fluxbox screen libxcomposite-dev libxcursor1 xauth && \
+	apt-get -y install --no-install-recommends xvfb wmctrl x11vnc websockify fluxbox screen libxcomposite-dev libxcursor1 xauth && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN cd /tmp && \
