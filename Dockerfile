@@ -1,13 +1,10 @@
 FROM ich777/debian-baseimage
 
-LABEL org.opencontainers.image.authors="admin@minenet.at"
-LABEL org.opencontainers.image.source="https://github.com/ich777/docker-novnc-baseimage"
+LABEL org.opencontainers.image.authors="janis@js0.ch"
+LABEL org.opencontainers.image.source="https://github.com/saschazesiger/docker-base-vnc"
 
 ARG NOVNC_V=1.4.0
 ARG TURBOVNC_V=3.0.3
-
-
-
 
 
 RUN apt-get update && \
