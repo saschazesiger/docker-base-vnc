@@ -6,8 +6,7 @@ LABEL org.opencontainers.image.source="https://github.com/ich777/docker-novnc-ba
 ARG NOVNC_V=1.4.0
 ARG TURBOVNC_V=3.0.3
 
-COPY novnccheck /usr/bin
-RUN chmod 755 /usr/bin/novnccheck
+
 
 RUN cd /tmp && \
 	wget -O /tmp/novnc.tar.gz https://github.com/novnc/noVNC/archive/v${NOVNC_V}.tar.gz && \
