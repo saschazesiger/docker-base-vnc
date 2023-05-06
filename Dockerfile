@@ -27,8 +27,8 @@ RUN chmod 751 /usr/bin/x11vnc
 
 RUN mkdir /browser && \
 	mkdir /opt/scripts && \
-	useradd -d /browser -s /bin/bash $USER && \
-	chown -R $USER /browser && \
+	useradd -d /browser -s /bin/bash ubuntu && \
+	chown -R ubuntu /browser && \
 	ulimit -n 2048
 
 ADD /server /opt/scripts/
