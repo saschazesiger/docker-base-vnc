@@ -25,14 +25,6 @@ RUN cd /tmp && \
 COPY /x11vnc /usr/bin/x11vnc
 RUN chmod 751 /usr/bin/x11vnc
 
-ENV DATA_DIR=/browser
-ENV TURBOVNC_PARAMS="-securitytypes none"
-ENV UMASK=000
-ENV UID=99
-ENV GID=100
-ENV DATA_PERM=770
-ENV USER="browser"
-
 RUN mkdir /browser && \
 	mkdir /opt/scripts && \
 	useradd -d /browser -s /bin/bash $USER && \
