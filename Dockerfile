@@ -25,10 +25,11 @@ RUN cd /tmp && \
 COPY /x11vnc /usr/bin/x11vnc
 RUN chmod 751 /usr/bin/x11vnc
 
+
 RUN mkdir /browser && \
 	mkdir /opt/scripts && \
-	useradd -d /browser -s /bin/bash ubuntu && \
-	chown -R ubuntu /browser && \
+	useradd -d /browser -s /bin/bash "browser" && \
+	chown -R "browser" /browser && \
 	ulimit -n 2048
 
 ADD /server /opt/scripts/
