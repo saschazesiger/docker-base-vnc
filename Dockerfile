@@ -33,8 +33,10 @@ RUN mkdir /browser && \
 	ulimit -n 2048
 
 ADD /server /opt/scripts/
+COPY /start-audio.sh /opt/scripts/
 COPY /conf/ /etc/.fluxbox/
 RUN chmod -R 770 /opt/scripts/
+
 
 
 COPY default.pa /etc/pulse/default.pa
