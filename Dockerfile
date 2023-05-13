@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.source="https://github.com/saschazesiger/"
 
 RUN  echo "deb http://deb.debian.org/debian bullseye contrib non-free" >> /etc/apt/sources.list && \
 	apt-get update && \
-	apt-get -y install --no-install-recommends wget locales procps xvfb wmctrl x11vnc fluxbox feh screen libxcomposite-dev libxcursor1 xauth python3 supervisor dbus-x11 x11-xserver-utils curl unzip gettext pulseaudio pavucontrol trickle ffmpeg fonts-takao fonts-arphic-uming libgtk-3-0 && \
+	apt-get -y install --no-install-recommends wget locales procps xvfb wmctrl x11vnc fluxbox screen libxcomposite-dev libxcursor1 xauth python3 supervisor dbus-x11 x11-xserver-utils curl unzip gettext pulseaudio pavucontrol trickle ffmpeg fonts-takao fonts-arphic-uming libgtk-3-0 && \
 	touch /etc/locale.gen && \
 	echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
 	locale-gen && \
