@@ -37,8 +37,6 @@ COPY /start-audio.sh /opt/scripts/
 COPY /conf/ /etc/.fluxbox/
 RUN chmod -R 770 /opt/scripts/
 
-RUN echo 'session.screen0.rootCommand: feh --bg-scale /etc/.fluxbox/background.jpg' >> /root/.fluxbox/init
-
 
 COPY default.pa /etc/pulse/default.pa
 RUN adduser root pulse-access
